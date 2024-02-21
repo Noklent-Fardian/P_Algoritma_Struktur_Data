@@ -14,6 +14,10 @@ public class BukuMain20 {
         buku1.terjual(5);
         buku1.gantiHarga(60000);
         buku1.tampilInformasi();
+        
+        Buku20 bk2 = new Buku20("Self Reward", " Maheera Ayesha",160,29,59000);
+        bk2.terjual(11);
+        bk2.tampilInformasi();
     }
     
 }
