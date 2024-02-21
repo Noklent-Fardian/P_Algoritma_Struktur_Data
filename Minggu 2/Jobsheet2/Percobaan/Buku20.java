@@ -1,9 +1,10 @@
-/**
- * Buku20
- */
+package Jobsheet2.Percobaan;
+
+
 public class Buku20 {
 
-    String judul, pengarang;
+    String judul;
+    public String pengarang;
     int halaman, stok, harga;
 
     void tampilInformasi() {
