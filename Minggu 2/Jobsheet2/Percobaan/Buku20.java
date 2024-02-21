@@ -10,6 +10,13 @@ public class Buku20 {
     public Buku20() {
 
     }
+    public Buku20(String jud, int hal,int harga,int stok,String pg){
+        judul = jud;
+        pengarang = pg;
+        halaman = hal;
+        this.stok = stok;
+        this.harga = harga;
+    }
 
     public Buku20(String jud, String pg, int hal, int stok,int har){
         judul = jud;

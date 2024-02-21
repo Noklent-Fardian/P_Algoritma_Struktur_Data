@@ -18,6 +18,11 @@ public class BukuMain20 {
         Buku20 bk2 = new Buku20("Self Reward", " Maheera Ayesha",160,29,59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+        System.out.println("================================================================Tugas Percoban 3================================================================");
+        Buku20 BukuNoklent = new Buku20("Noklent World 616", 200, 80000, 10, "Noklent");
+        BukuNoklent.terjual(5);
+        BukuNoklent.tampilInformasi();
+
     }
     
 }
