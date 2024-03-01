@@ -1,6 +1,6 @@
 package Joobshet3.Latihan1;
 
-public class Kerucut extends BangunRuang{
+public class Kerucut  {
     public int r;
     public int s;
 

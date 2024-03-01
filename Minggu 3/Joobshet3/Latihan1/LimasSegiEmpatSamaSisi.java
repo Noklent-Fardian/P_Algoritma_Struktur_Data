@@ -1,6 +1,6 @@
 package Joobshet3.Latihan1;
 
-public class LimasSegiEmpatSamaSisi extends BangunRuang{
+public class LimasSegiEmpatSamaSisi  {
 
     int t;
     int s;

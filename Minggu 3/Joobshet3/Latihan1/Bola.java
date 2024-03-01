@@ -1,6 +1,6 @@
 package Joobshet3.Latihan1;
 
-public class Bola extends BangunRuang{
+public class Bola  {
     int r;
     public Bola(int r){
         this.r = r;

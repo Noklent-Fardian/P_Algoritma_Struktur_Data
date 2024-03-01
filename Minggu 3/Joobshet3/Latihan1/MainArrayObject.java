@@ -4,35 +4,63 @@ import java.util.Scanner;
 
 public class MainArrayObject {
     public static void main(String[] args) {
-        int r, s, tl, sl, rb;
-        BangunRuang[] bangunRuang = new BangunRuang[3];
-        for (int i = 0; i < bangunRuang.length; i++) {
-            if (i == 0) {
-                System.out.println("================================ KERUCUT =================================");
-                r = Integer.parseInt(input("Masukkan jari-jari kerucut: "));
-                s = Integer.parseInt(input("Masukkan sisi miring kerucut: "));
-                Kerucut kerucut = new Kerucut(r, s);
-                System.out.println("HASIL: ");
-                System.out.println("Luas Permukaan Kerucut: " + kerucut.hitungLuas(r, s));
-                System.out.println("Volume Kerucut: " + kerucut.hitungVolume(r, s));
-            } else if (i == 1) {
-                System.out
-                        .println("================================ LIMAS SEGI EMPAT =================================");
-                tl = Integer.parseInt(input("Masukkan tinggi limas segiempat: "));
-                sl = Integer.parseInt(input("Masukkan sisi limas segiempat: "));
-                LimasSegiEmpatSamaSisi limasSegiEmpatSamaSisi = new LimasSegiEmpatSamaSisi(tl, sl);
-                System.out.println("HASIL: ");
-                System.out.println("Luas Permukaan Limas Segi Empat: " + limasSegiEmpatSamaSisi.hitungLuasPermukaan( sl));
-                System.out.println("Volume Limas Segi Empat: " + limasSegiEmpatSamaSisi.hitungVolume(tl, sl));
-            } else {
-                System.out.println("================================ BOLA =================================");
-                rb = Integer.parseInt(input("Masukkan Jari Jari Bola: "));
-                Bola bola = new Bola(rb);
-                System.out.println("HASIL: ");
-                System.out.println("Luas Permukaan Bola: " + bola.hitungLuas(rb));
-                System.out.println("Volume Bola: " + bola.hitungVolume(rb));
-            }
+
+        Kerucut[] kArray;
+        Bola[] bArray;
+        LimasSegiEmpatSamaSisi[] lArray;
+
+        System.out.println("========= Menghitung Volume dan Luas Permukaan Bangun Ruang ===========");
+        int jumlah = Integer.parseInt(input("Jumlah bangun ruang : "));
+
+        kArray = new Kerucut[jumlah];
+        bArray = new Bola[jumlah];
+        lArray = new LimasSegiEmpatSamaSisi[jumlah];
+        // Input
+        System.out.println("Inputkan Data Kerucut");
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Kerucut ke-" + (i + 1));
+            int r = Integer.parseInt(input("Jari-jari: "));
+            int s = Integer.parseInt(input("Tinggi: "));
+            kArray[i] = new Kerucut(r, s);
         }
+        System.out.println("Inputkan Data Lima Segi Empat Sama Sisi");
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Limas Segi Empat Sama Sisi ke-" + (i + 1));
+            int t = Integer.parseInt(input("Tinggi: "));
+            int s = Integer.parseInt(input("Sisi: "));
+            lArray[i] = new LimasSegiEmpatSamaSisi(t, s);
+        }
+        System.out.println("Inputkan Data Bola");
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Bola ke-" + (i + 1));
+            int r = Integer.parseInt(input("Jari-jari: "));
+            bArray[i] = new Bola(r);
+        }
+
+        // Print Hasil
+        System.out.println("============ HASIL PERHITUNGAN ===========");
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Kerucut ke-" + (i + 1) + ", Jari Jari: " + kArray[i].r + ", Tinggi: " + kArray[i].s);
+            System.out.printf("Volume Kerucut ke-" + (i + 1) + ": %.2f\n",
+                    kArray[i].hitungVolume(kArray[i].r, kArray[i].s));
+            System.out.printf("Luas Permukaan Kerucut ke-" + (i + 1) + ":%.2f\n",
+                    kArray[i].hitungLuas(kArray[i].r, kArray[i].s));
+
+        }
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println(
+                    "Limas Segi Empat Sama Sisi ke-" + (i + 1) + ", Tinggi: " + lArray[i].t + ", Sisi: " + lArray[i].s);
+            System.out.printf("Volume Limas Segi Empat Sama Sisi ke-" + (i + 1) + ": %.2f\n",
+                    lArray[i].hitungVolume(lArray[i].t, lArray[i].s));
+            System.out.printf("Luas Permukaan Limas Segi Empat Sama Sisi ke-" + (i + 1) + ":%.2f\n",
+                    lArray[i].hitungLuasPermukaan(lArray[i].s));
+        }
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Bola ke-" + (i + 1) + ", Jari Jari: " + bArray[i].r);
+            System.out.printf("Volume Bola ke-" + (i + 1) + ": %.2f\n", bArray[i].hitungVolume(bArray[i].r));
+            System.out.printf("Luas Permukaan Bola ke-" + (i + 1) + ":%.2f\n", bArray[i].hitungLuas(bArray[i].r));
+        }
+
     }
 
     private static String input(String prompt) {
