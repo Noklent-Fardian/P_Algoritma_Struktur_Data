@@ -9,4 +9,5 @@ public class Dragon20Main {
         d.move();
     }
     
+    
 }
