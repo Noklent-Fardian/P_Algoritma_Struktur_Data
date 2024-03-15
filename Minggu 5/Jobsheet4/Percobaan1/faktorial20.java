@@ -1,11 +1,15 @@
-package Jobsheet4;
+package Jobsheet4.Percobaan1;
 public class faktorial20 {
     int nilai;
 
      public int faktorialBF20(int n ){
         int faktor = 1;
-        for (int i = 1; i <= nilai; i++) {
-            faktor = faktor * i;
+        // for (int i = 1; i <= nilai; i++) {
+        //     faktor = faktor * i;
+        // }
+        while (n > 0) {
+            faktor = faktor * n;
+            n--;
         }
         return faktor;
 

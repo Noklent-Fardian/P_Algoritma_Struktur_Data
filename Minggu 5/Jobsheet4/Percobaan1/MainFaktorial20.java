@@ -1,6 +1,7 @@
-package Jobsheet4;
+package Jobsheet4.Percobaan1;
 
 import java.util.Scanner;
+
 
 public class MainFaktorial20 {
     public static void main(String[] args) {
