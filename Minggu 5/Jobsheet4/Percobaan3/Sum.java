@@ -2,11 +2,11 @@ package Jobsheet4.Percobaan3;
 
 public class Sum {
     int element;
-    double keuntungan[], total;
+    double keuntungan[][], total;
 
-    Sum(int element){
+    Sum(int element,int per){
         this.element = element;
-        this.keuntungan = new double[this.element];
+        this.keuntungan = new double[per][this.element];
         this.total = 0;
     }
 
