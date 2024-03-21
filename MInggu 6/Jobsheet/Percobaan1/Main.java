@@ -15,12 +15,19 @@ public class Main {
 
         System.out.println("Data Mahasiswa sebelum sorting: ");
         list.tampil();
+        //bubble
         System.out.println("Data Mahasiswa setelah sorting desc berdasarkan IPK: ");
         list.bubbleSort();
         list.tampil();
 
+        //selection
         System.out.println("Data Mahasiswa setelah sorting asc berdasarkan IPK: ");
         list.selectionSort();
+        list.tampil();
+
+        //insertion
+        System.out.println("Data Mahasiswa setelah sorting insertion asc berdasarkan IPK: ");
+        list.insertionSort();
         list.tampil();
     }
     
