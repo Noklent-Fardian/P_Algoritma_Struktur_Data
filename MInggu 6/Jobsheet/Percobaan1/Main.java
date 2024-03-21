@@ -26,8 +26,14 @@ public class Main {
         list.tampil();
 
         //insertion
+        //asc
         System.out.println("Data Mahasiswa setelah sorting insertion asc berdasarkan IPK: ");
         list.insertionSort();
+        list.tampil();
+
+        //desc
+        System.out.println("Data Mahasiswa setelah sorting insertion desc berdasarkan IPK: ");
+        list.insertionSortDesc();
         list.tampil();
     }
     
