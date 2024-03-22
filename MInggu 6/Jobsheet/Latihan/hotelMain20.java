@@ -1,9 +1,8 @@
 package Jobsheet.Latihan;
 
-public class MainHotel {
+public class hotelMain20 {
     public static void main(String[] args) {
         HotelService hotelService = new HotelService();
-
         do {
             hotelService.tampil();
             System.out.println("1. Tambah Hotel");

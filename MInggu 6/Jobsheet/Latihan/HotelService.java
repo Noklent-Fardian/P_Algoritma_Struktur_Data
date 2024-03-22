@@ -37,7 +37,6 @@ public class HotelService {
     }
     // tampil hotel
     void tampil() {
-        System.out.println("ini jumlah room"+room.length);
         String firstLine = "╔════╦═════════════════╦════════════╦════════════╦═════════╗";
         String middleLine = "╠════╬═════════════════╬════════════╬════════════╬═════════╣";
         String lastLine = "╚════╩═════════════════╩════════════╩════════════╩═════════╝";
