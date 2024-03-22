@@ -1,3 +1,4 @@
+package Jobsheet.Percobaan1;
 public class Main {
     public static void main(String[] args) {
         DaftarMahasiswaBerprestasi list = new DaftarMahasiswaBerprestasi();

@@ -1,3 +1,5 @@
+package Jobsheet.Percobaan1;
+
 public class DaftarMahasiswaBerprestasi {
     Mahasiswa listMhs[] = new Mahasiswa[5];
     int idx;

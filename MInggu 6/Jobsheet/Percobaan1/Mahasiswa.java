@@ -1,6 +1,7 @@
 /**
  * Mahasiswa
  */
+package Jobsheet.Percobaan1;
 public class Mahasiswa {
     String nama;
     int thnMasuk,umur;
