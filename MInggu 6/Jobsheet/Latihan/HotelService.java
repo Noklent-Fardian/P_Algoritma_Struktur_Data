@@ -70,7 +70,7 @@ public class HotelService {
         }
     }
     // urutkan hotel berdasarkan harga terendah dengam selection sort
-    public void urutkanBintangSS() {
+       public void urutkanHargaSS() {
         for (int i = 0; i < room.length; i++) {
             int min = i;
             for (int j = i + 1; j < room.length; j++) {
@@ -86,7 +86,7 @@ public class HotelService {
                 room[i] = temp;
             }
         }
-    }
+       }
     // urutkan hotel berdasarkan bintang terbanyak dengan bubble sort
     public void urutkanBintangBS() {
         for (int i = 0; i < room.length; i++) {
@@ -102,19 +102,19 @@ public class HotelService {
         }
     }
     // urutkan hotel berdasarkan bintang terbanyak dengan selection sort
-    public void urutkanHargaSS() {
+    public void urutkanBintangSS() {
         for (int i = 0; i < room.length; i++) {
-            int min = i;
+            int max = i;
             for (int j = i + 1; j < room.length; j++) {
-                if (room[j] != null && room[min] != null) {
-                    if (room[j].bintang > room[min].bintang) {
-                        min = j;
+                if (room[j] != null && room[max] != null) {
+                    if (room[j].bintang > room[max].bintang) {
+                        max = j;
                     }
                 }
             }
-            if (room[min] != null && room[i] != null) {
-                Hotel temp = room[min];
-                room[min] = room[i];
+            if (room[max] != null && room[i] != null) {
+                Hotel temp = room[max];
+                room[max] = room[i];
                 room[i] = temp;
             }
         }
