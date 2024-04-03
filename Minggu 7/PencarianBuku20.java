@@ -1,7 +1,16 @@
 public class PencarianBuku20 {
     Buku20 listBk[] = new Buku20[5];
+    
     int idx;
+    PencarianBuku20(){
+        listBk[0] = new Buku20(111, "Algoritma", "Indrajani", 2019, 100);
+        listBk[1] = new Buku20(132, "Dasar Pemrograman Java", "Abdul Kadir", 2004, 200);
+        listBk[2] = new Buku20(121, "Pemrograman Java", "Indrajani", 2005, 100);
+        listBk[3] = new Buku20(20, "Pemrograman Berbasis Objek", "Indrajani", 2005, 100);
+        listBk[4] = new Buku20(1, "Dasar Pemrograman", "Abdul Kadir", 2004, 200);
+    }
 
+    // Array listBk
     // fungsi tambah
     void tambah(Buku20 bk){
         if(idx < listBk.length){
@@ -37,6 +46,15 @@ public class PencarianBuku20 {
         }else{
             System.out.println("data : "+x+" tidak ditemukan");
         }
+    }
+    //method findbuku
+    public Buku20 FindBuku(int cari) {
+        for (Buku20 buku : listBk) {
+            if (buku.kodeBuku == cari) {
+                return buku;
+            }
+        }
+        return null;
     }
     
 }
