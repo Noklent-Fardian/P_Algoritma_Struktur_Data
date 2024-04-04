@@ -36,6 +36,7 @@ public class BukuMain20 {
         int pos = data.FindSeqSearch(cari);
         data.TampilPosisi(cari, pos);
         System.out.println("----------------------------------------------------");
+        System.out.println("Mencari Buku Dengan Binary Search");
         pos = data.FindBinarySearch(cari, 0, jumBuku-1);
         data.TampilPosisi(cari, pos);
         System.out.println("----------------------------------------------------");

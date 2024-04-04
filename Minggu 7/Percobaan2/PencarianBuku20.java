@@ -4,11 +4,11 @@ public class PencarianBuku20 {
     
     int idx;
     PencarianBuku20(){
-        listBk[0] = new Buku20(111, "Algoritma", "Indrajani", 2019, 100);
-        listBk[1] = new Buku20(132, "Dasar Pemrograman Java", "Abdul Kadir", 2004, 200);
-        listBk[2] = new Buku20(121, "Pemrograman Java", "Indrajani", 2005, 100);
-        listBk[3] = new Buku20(20, "Pemrograman Berbasis Objek", "Indrajani", 2005, 100);
-        listBk[4] = new Buku20(1, "Dasar Pemrograman", "Abdul Kadir", 2004, 200);
+        listBk[2] = new Buku20(20215, "Algoritma", "Indrajani", 2019, 100);
+        listBk[4] = new Buku20(20214, "Dasar Pemrograman Java", "Abdul Kadir", 2004, 200);
+        listBk[3] = new Buku20(20212, "Pemrograman Java", "Indrajani", 2005, 100);
+        listBk[1] = new Buku20(20211, "Pemrograman Berbasis Objek", "Indrajani", 2005, 100);
+        listBk[0] = new Buku20(20210, "Dasar Pemrograman", "Abdul Kadir", 2004, 200);
     }
 
     // Array listBk
@@ -60,10 +60,11 @@ public class PencarianBuku20 {
     }
     //method findbinarysearch
     public int FindBinarySearch(int cari, int left, int right){
-        System.out.println("Mencari Buku Dengan Binary Search");
         int mid;
         if(right >= left){
+            //dibawah ini adalah bagian divide
             mid = (left + right) / 2;
+            //di bawah ini adalah bagian conquer
             if(cari == listBk[mid].kodeBuku){
                 return (mid);
             }else if(listBk[mid].kodeBuku > cari){
