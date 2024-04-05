@@ -1,9 +1,8 @@
-package Percobaan2;
+package Latihan;
 import java.util.Scanner;
 
 public class BukuMain20 {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
         Scanner s1 = new Scanner(System.in);
         PencarianBuku20 data = new PencarianBuku20();
 
@@ -25,14 +24,15 @@ public class BukuMain20 {
         //     Buku20 bk = new Buku20(kode, judul, pengarang, tahun, stock);
         //     data.tambah(bk);
         // }
-        System.out.println("----------------------------------------------------");
+        do{
+            System.out.println("----------------------------------------------------");
         System.out.println("Data Keseluruh Buku");
         data.tampil();
 
         System.out.println("----------------------------------------------------");
         System.out.println("Masukan kode buku yang dicari : ");
-        int cari = s.nextInt();
-        System.out.println("----------------------------------------------------");
+        String cari = s1.nextLine();
+        System.out.println("---------------------------------------------------");
         int pos = data.FindSeqSearch(cari);
         data.TampilPosisi(cari, pos);
         System.out.println("----------------------------------------------------");
@@ -40,6 +40,7 @@ public class BukuMain20 {
         pos = data.FindBinarySearch(cari, 0, jumBuku-1);
         data.TampilPosisi(cari, pos);
 
+        }while(true);
     }
     
 }
