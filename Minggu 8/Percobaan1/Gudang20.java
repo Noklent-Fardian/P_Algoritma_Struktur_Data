@@ -65,8 +65,8 @@ public class Gudang20 {
     public void tampilkanBarang(){
         if(!cekKosong()){
             System.out.println("Rincian tumpukan Barang di Gudang:");
-            // for(int i = top; i >= 0; i--){
-                for(int i=0; i<=top; i++){
+            for(int i = top; i >= 0; i--){
+                // for(int i=0; i<=top; i++){ -> ini bagian yang salah pada pertanyaan 1
                     System.out.printf("Kode: %d, Nama: %s, Kategori: %s\n", tumpukan[i].kode, tumpukan[i].nama, tumpukan[i].kategori);
             }
         } else {

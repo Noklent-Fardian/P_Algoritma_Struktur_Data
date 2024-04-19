@@ -5,15 +5,19 @@ import Percobaan1.Gudang20;
 
 public class Utama20 {
     public static void main(String[] args) {
-        Gudang20 gudang = new Gudang20(7);
         Scanner input20 = new Scanner(System.in);
+        int kapasitas;
+        System.out.print("Masukkan Kapasitas Gudang: ");
+        kapasitas = input20.nextInt();
+        Gudang20 gudang = new Gudang20(kapasitas);
 
         while (true) {
             System.out.println("\nMenu");
             System.out.println("1. Tambah Barang");
             System.out.println("2. Ambil Barang");
             System.out.println("3. Tampilkan Tumpukan Barang");
-            System.out.println("4. Keluar");
+            System.out.println("4. Tampilkan Barang Teratas");
+            System.out.println("5. Keluar");
             System.out.print("Pilihan: ");
             int pilihan = input20.nextInt();
             switch (pilihan) {
@@ -32,9 +36,12 @@ public class Utama20 {
                     gudang.ambilBarang();
                     break;
                 case 3:
-                    gudang.lihatBarangTeratas();
+                    gudang.tampilkanBarang();
                     break;
                 case 4:
+                    gudang.lihatBarangTeratas();
+                    break;
+                    case 5:
                     System.exit(0);
                     break;
                 default:
