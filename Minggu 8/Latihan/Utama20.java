@@ -46,6 +46,11 @@ public class Utama20 {
                     gudang.lihatBarangTerbawah();
                     break;
                 case 6:
+                    System.out.println("Masukan Kode atau Nama Barang");
+                    String cari = input20.next();
+                    gudang.cariBarang(cari);
+                    break;
+                case 7:
                     System.exit(0);
                     break;
                 default:
