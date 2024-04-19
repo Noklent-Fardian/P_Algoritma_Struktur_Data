@@ -1,7 +1,5 @@
+package Percobaan2;
 import java.util.Scanner;
-
-import Percobaan1.Barang20;
-import Percobaan1.Gudang20;
 
 public class Utama20 {
     public static void main(String[] args) {
