@@ -1,6 +1,6 @@
 package P1;
 
-import org.w3c.dom.Node;
+
 
 public class singleLinkedList {
     node head, tail;
