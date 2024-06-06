@@ -73,4 +73,18 @@ public class Graph20 {
         }
         System.out.println();
     }
-}
+
+    public void checkAdjacency(int asal, int tujuan) throws Exception {
+        boolean status = false;
+        for (int i = 0; i < list[asal].size(); i++) {
+            if (tujuan == list[asal].getData(i)) {
+                status = true;
+                break;
+            }
+        }
+        if (status) {
+            System.out.println("Gedung " + (char)('A'+asal) + " Terhubung dengan Gedung " +  (char)('A'+tujuan));
+        } else {
+            System.out.println("Gedung " + (char)('A'+asal) + " Tidak Terhubung dengan Gedung " +  (char)('A'+tujuan));
+        }
+    }}
